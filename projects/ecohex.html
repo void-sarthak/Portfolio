@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="game.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <!--img src="images/logo.png" class="logo"-->
+            <ul id="sidemenu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+
+            <h1 class="sub-title">Eco Hex</h1>
+
+            <div class="about-col-1">
+                <img src="/images/EcoHex/001.png">
+            </div>
+
+            <div class="about-col-2">
+                <img src="/images/EcoHex/002.png">
+                <img src="/images/EcoHex/003.png">
+                <img src="/images/EcoHex/004.png">
+            </div>
+            
+            <div class="about-col-3">
+                <h2>About the Game</h2>
+                <p>EcoHex is a turn-based strategy game, you and the computer compete to control a hexagonal board by placing pawns. 
+                    The goal is to establish dominance by strategically positioning your pawns and blocking the opponent pawns. 
+                    The game allows customization of difficulty level, board size, and choice of who goes first, enabling a tailored experience for both beginners and seasoned players</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">How to Play</p>
+                    <p class="tab-links" onclick="opentab('por')">Rules</p>
+                    <p class="tab-links" onclick="opentab('education')">Download Guide</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                        <li>The game is played turn by turn where the player can choose who to play first, computer or player itself.</li>
+                        <li>Each player can place a pawn on the board in their turn.</li>
+                        <li>The pawn can be played by clicking on the empty cell in the board.</li>
+                        <li>The player can choose the difficulty lovel of the AI.</li>
+                        <li>The player can choose the size of the board.</li>
+                </div>
+                <div class="tab-contents" id="por">
+                    <li>The player need to alling 4 cells in a row to win the game.</li>
+                    <li>If player alligns 3 pawns in a row, before allinging 4 pawns, the player loses.</li>
+                    <li>Player can allign the pawns in any of direction on the hexagonal grid</li>
+                    <li>Player can also block the opponent pawns by placing their own pawns in between the opponent pawns.</li>
+                </div>
+                <div class="tab-contents" id="education">
+                    <p>Download the zip file, and extract the game.
+                        After extracting, click on the .exe file to play the game.
+                    </p>
+                    <a href="/games/EcoHex.zip" download class="btn btn2">
+                        Download
+                    </a>
+                    <li>Check the github code base.</li>
+                    <a href="https://github.com/CrypthiccCrypto/V4-Gamedev" download class="btn btn2">
+                        Code Link
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="copyright">
+        <p>Copyright ©<a href="https://www.linkedin.com/in/vishant-bhadana-8baba0247/">Sarthak Agarwal</a></p>
+    </div>
+</div>
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbztSO6SuQRSaRgdSJ5XgSIve7Fb6cjTpxl_0VW9zxxJ73Gq-9gW-YIgfqhH5twNwIpl/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>

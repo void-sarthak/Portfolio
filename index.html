@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <!--img src="images/logo.png" class="logo"-->
+            <ul id="sidemenu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Every start has an end</p>
+            <h1>Hi, I'm <span>Sarthak Agarwal</span>
+                <br><span id="element"></span></h1>
+        </div>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="/images/EcoHex.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I'm Sarthak Agarwal, an undergraduate student pursuing Biological Sciences and Bioengineering at IIT Kanpur. Currently in my 3rd year, I am deeply committed and industrious, with a particular focus on my field of study. However, my true passion lies in game development, an area where I have dedicated myself to mastering the intricacies of game programming and graphics rendering. I am on a continual journey to broaden my expertise by delving into the latest advancements and technologies in the gaming industry.</p>
+
+                <p style = "margin-top: 20px;"></p>With a fervent interest in game design and development, I am devoted to refining my skills in game programming and understanding the nuances of graphics rendering. I see challenges not as obstacles but as opportunities to grow and evolve. Through persistent practice, engaging in hands-on projects, and participating in game jams, I strive to sharpen my problem-solving skills and innovate within the realm of game development.</p>
+                
+                <p style = "margin-top: 20px;"></p>Being a student at IIT Kanpur has provided me with a rigorous academic backdrop, fostering my analytical thinking, meticulous attention to detail, and ability to work seamlessly in team settings. I actively engage in game development competitions and collaborative projects, which have been instrumental in honing my ability to excel in a fast-paced and cooperative work environment.</p>
+                
+                <p style = "margin-top: 20px;"></p>Beyond my academic endeavors, I am an avid learner, always on the lookout for new challenges and avenues to explore within game development. I am particularly interested in the intersection of biological sciences and bioengineering with game development, exploring how these fields can intersect to create innovative and immersive gaming experiences. Whether it’s through leveraging bioinspired algorithms in game AI or incorporating realistic biological ecosystems into game environments, I am keen to push the boundaries of traditional game development.</p>
+                
+                <p style = "margin-top: 20px;"></p>Driven by an insatiable curiosity and a passion for gaming excellence, I am committed to leveraging my skills and educational background to make a significant impact in the world of game development. I am excited to undertake new projects, collaborate with fellow game development enthusiasts, and continuously challenge the limits of my creative and technical abilities.</p>
+                
+                <p style = "margin-top: 20px;"></p>If you have any questions, are interested in collaboration, or simply wish to connect and discuss game development, please don't hesitate to reach out. I look forward to exploring new opportunities and making meaningful contributions to the field of game development as both a student of Biological Sciences and Bioengineering and as a passionate game developer.</p>
+                
+                <p style = "margin-top: 20px;"></p>Thank you for visiting my portfolio website. I hope you find inspiration in the projects and experiences I share here, each a testament to my dedication, hard work, and passion for game development.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('por')">Position of Responsibility</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Game Development</span><br>Game Programming, Game Designing</li>
+                        <li><span>Computer Graphics</span><br>Graphics Rendering Programming</li>
+                        <li><span>Technical</span><br>C, C++, C#, Java Script, Git, Python, HTML, CSS</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="por">
+                    <ul>
+                        <li><span>2023 - 2024</span><br>Coordinator, Game Development Club, Science and Technology Council, IIT Kanpur</li>
+                        <li><span>2022 - 2023</span><br>Secretary, Esports Society, Games and Sports Council, IIT Kanpur</li>
+                        <li><span>2022 - 2023</span><br>Senior Executive, Udghosh'22, IIT Kanpur</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021 - 2025</span><br>Indian Institute of Technology Kanpur</li>
+                        <li><span>2017 - 2021</span><br>St. Joseph Convent School</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ----------portfolio------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="/images/ignition_evade.png">
+                <div class="layer">
+                    <h2>Ignition Evade</h2>
+                    <p>IGDC, Inter IIT TechMeet'23</p>
+                    <a href="/projects/ignition_evade.html"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="swordholder.jpg">
+                <div class="layer">
+                    <h3>Jon Snow</h3>
+                    <p>King in the North</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="sword.jpg">
+                <div class="layer">
+                    <h3>The Sword</h3>
+                    <p>Valyrian Steel(no doubt)</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-- ----------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> sarthakagrawal2077@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>7726048924</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100075157452457"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/VishantBhadana"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/_vishantbhadana_/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/vishant-bhadana-8baba0247/"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="CV.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright ©<a href="https://www.linkedin.com/in/vishant-bhadana-8baba0247/">Sarthak Agarwal</a></p>
+    </div>
+</div>
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Undergraduate Student of<br>Biological Sciences and Bioengineering<br>IIT Kanpur'],
+            typeSpeed: 50,
+        });
+    </script>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbztSO6SuQRSaRgdSJ5XgSIve7Fb6cjTpxl_0VW9zxxJ73Gq-9gW-YIgfqhH5twNwIpl/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>

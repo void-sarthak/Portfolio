@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="projects.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <!--img src="images/logo.png" class="logo"-->
+            <ul id="sidemenu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+</div>
+<!-- ----------portfolio------------ -->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="/images/ignition_evade.png">
+                <div class="layer">
+                    <h2>Ignition Evade</h2>
+                    <p>IGDC, Inter IIT TechMeet'23</p>
+                    <a href="/projects/ignition_evade.html"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="/images/EcoHex.png">
+                <div class="layer">
+                    <h3>EcoHex</h3>
+                    <p>Takneek'22, Game Development Club, IIT Kanpur</p>
+                    <a href="/projects/ecohex.html"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="sword.jpg">
+                <div class="layer">
+                    <h3>The Sword</h3>
+                    <p>Valyrian Steel(no doubt)</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/ignition_evade.png">
+                <div class="layer">
+                    <h3>The Sword</h3>
+                    <p>Valyrian Steel(no doubt)</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/ignition_evade.png">
+                <div class="layer">
+                    <h3>The Sword</h3>
+                    <p>Valyrian Steel(no doubt)</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/ignition_evade.png">
+                <div class="layer">
+                    <h3>The Sword</h3>
+                    <p>Valyrian Steel</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="copyright">
+        <p>Copyright ©<a href="https://www.linkedin.com/in/vishant-bhadana-8baba0247/">Sarthak Agarwal</a></p>
+    </div>
+</div>
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Undergraduate Student of<br>Biological Sciences and Bioengineering<br>IIT Kanpur'],
+            typeSpeed: 50,
+        });
+    </script>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbztSO6SuQRSaRgdSJ5XgSIve7Fb6cjTpxl_0VW9zxxJ73Gq-9gW-YIgfqhH5twNwIpl/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>

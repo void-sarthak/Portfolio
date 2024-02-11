@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="game.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <!--img src="images/logo.png" class="logo"-->
+            <ul id="sidemenu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+
+            <h1 class="sub-title">Ignition Evade</h1>
+
+            <div class="about-col-1">
+                <video controls>
+                    <source src="/images/Ignition_Evade/Intro_scene.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="about-col-2">
+                <img src="/images/EcoHex/002.png">
+                <img src="/images/EcoHex/003.png">
+                <img src="/images/EcoHex/004.png">
+            </div>
+            
+            <div class="about-col-3">
+                <h2>About the Game</h2>
+                <p>Seishin is a little fire spirit, and the protagonist of the game. He was enjoying himself at how but suddenly the heavy rainfall started.
+                    Making matter worse, the nearby dam was overflown causing flood in the area.
+                    Searching for higher grounds, Seishin ran away from the flood and entered the caves.
+                    In the caves he found the mysterious portal that took him to unkown land.
+                    Now trapped in these lands, Seishin needs to escape and go back to his home. 
+                </p>
+                <p style = "margin-top: 30px;">
+                    Ignition Evade is a 2D platform based, where the player plays as Seishin, helping him to escape the unknown lands and go back to his home.
+                    The game is designed to be played on PC and is developed using Unity Engine.
+                    The game is designed to be played using keyboard and mouse.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">How to Play</p>
+                    <p class="tab-links" onclick="opentab('por')">Rules</p>
+                    <p class="tab-links" onclick="opentab('education')">Download Guide</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li>Main objective is to transverse upwards and reach the exit portal</li>
+                        <li>Seishin is vulnerable to water, to avoid the water that is rising upwards.</li>
+                        <p style = "margin-top: 30px;">
+                        <li><b><span style = "font-size: 20px;">Controls</span></b></li>
+                            <li>Use arrow keys to move Seishin.</li>
+                            <li>Use space bar to jump.</li>
+                            <li>Use left mouse button to activate the dash and then aim it.</li>
+                            <li>On leaving the LMB, dash will activate in the aimmed direction.</li>
+                        </p>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="por">
+                    <ul>
+                        <li>The player needs to reach the top of the map by avoiding water, and exit through the portal.</li>
+                        <li>The player will burn the objects through his fire, so avoid staying too long on platforms.</li>
+                        <li>The player can break the platforms by dashing through them.</li>
+                        <li>There are pportals in between the maps, which allow player to teleport form one end to other.</li>
+                        <li>There is a tutorial level that will help you to learn the game.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <p>Download the zip file, and extract the game.
+                        After extracting, click on the .exe file to play the game.
+                    </p>
+                    <a href="/games/Ignition Evade.zip" download class="btn btn2">
+                        Download
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="copyright">
+        <p>Copyright ©<a href="https://www.linkedin.com/in/vishant-bhadana-8baba0247/">Sarthak Agarwal</a></p>
+    </div>
+</div>
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbztSO6SuQRSaRgdSJ5XgSIve7Fb6cjTpxl_0VW9zxxJ73Gq-9gW-YIgfqhH5twNwIpl/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
