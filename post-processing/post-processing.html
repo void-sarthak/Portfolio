@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Image Processing</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <script type="text/javascript" src="glMatrix-0.9.5.min.js"></script>
+    <script type="text/javascript" src="imageProcessing.js"></script>
+    <link rel = "stylesheet"  href = "graphics.css">
+  </head>
+
+  <body onload="webGLStart();">
+    <div id="header">
+      <div class="container">
+          <nav>
+              <!--img src="images/logo.png" class="logo"-->
+              <ul id="sidemenu">
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../projects.html">Projects</a></li>
+                  <i class="fas fa-times" onclick="closemenu()"></i>
+              </ul>
+              <i class="fas fa-bars" onclick="openmenu()"></i>
+          </nav>
+      </div>
+    </div>
+
+
+    <div id="about">
+      <div class="container">
+          <div class="row">
+              <h1 class="sub-title">Image Processing</h1>
+          </div>
+      </div>
+    </div>
+
+    <div id = "Assignment">
+    <div class = "mode">
+      <canvas
+        id="Assignment_4"
+        style="border: none"
+        width="800"
+        height="800"
+      ></canvas>
+    </div>
+    <div class = "form">
+      <div class = "input">
+        <h2>Input Images</h2>
+        <div class = "input_btn">
+          Background Image<input type = "file" id = "fileInput" onchange = "loadBackgroundImage(event)">
+        </div>
+        <div class = "input_btn">
+          Foreground Image<input type = "file" id = "fileInput2" onchange = "loadForegroundImage(event)">
+        </div>
+      </div>  
+      <div class = "image">
+        <h2>Image Mode</h2>
+        <p>
+          <button class = "button" onclick = "backgroundTexture()"> Background Only </button>
+          <button class = "button" onclick = "alphaBlending()"> Alpha Blended </button>
+        </p>
+      </div>
+      <div class = "input">
+        <h2>Image Processes</h2>
+        <div class = "p">GrayScale 
+        <input type = "radio" name = "imageProcess" onclick = "greyScaleFilter()">
+        Sepia
+        <input type = "radio" name= "imageProcess" onclick = "sepiaFilter()">
+        </div>
+        <br> Contrast 
+        <class = "sliders">
+          <input autocomplete="off" type="range" min="-50" max="50" value="0" id="contrast">
+        <br> Brightness
+          <input autocomplete="off" type="range" min="1" max="30" value="10" id="brightness">
+        </class>
+      </div>
+      <h3>Process Background Image:</h3>
+      <br>Smooth
+      <input type = "radio" name = "imageProcess" onclick = "smoothFilter()">
+      Sharpen
+      <input type = "radio" name = "imageProcess" onclick = "sharpenFilter()">
+      Gradient
+      <input type = "radio" name = "imageProcess" onclick = "gradientFilter()">
+      Laplacian
+      <input type = "radio" name = "imageProcess" onclick = "laplacianFilter()">
+      </br>
+      <br>
+      <a href = "post-processing.html" class = "button" >Reset Scene</a>
+      <button class = "button"onclick="save()">Save Screenshot</button>
+    </br>
+    </div>
+    </div>
+  </body>
+</html>

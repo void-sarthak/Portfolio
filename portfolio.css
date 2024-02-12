@@ -8,12 +8,12 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background: #080808;
-    color: #fff;
+    background: #003B73;
+    color: #BFD7ED;
 }
 #header{
     width: 100%;
-    height: 100vh;
+    height: 60vh;
     background-image: url(007.png);
     background-size: cover;
     background-position: center;
@@ -41,7 +41,7 @@ nav ul li{
 }
 
 nav ul li a{
-    color: #fff;
+    color: #eaa80c;
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -50,7 +50,7 @@ nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #eaa80c;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -60,7 +60,7 @@ nav ul li a:hover::after{
     width: 100%;
 }
 .header-text{
-    margin-top: 20%;
+    margin-top: 10%;
     font-size: 30px;
 }
 .header-text h1{
@@ -68,12 +68,12 @@ nav ul li a:hover::after{
     margin-top: 20px;
 }
 .header-text h1 span{
-    color: #ff004f;
+    color: #eaa80c;
 }
 /* -----------about--------------- */
 #about{
     padding: 80px 0;
-    color: #ababab;
+    color: #BFD7ED;
 }
 .row{
     display: flex;
@@ -95,16 +95,17 @@ nav ul li a:hover::after{
 .sub-title{
     font-size: 60px;
     font-weight: 600;
-    color: #fff;
+    color: #eaa80c;
 }
 
 .tab-titles{
     display: flex;
-    margin: 20px 0 40px;
+    margin: 20px 0 30px;
+    color: #eaa80c;
 }
 .tab-links{
     margin-right: 50px;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
@@ -113,7 +114,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #eaa80c;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -121,16 +122,17 @@ nav ul li a:hover::after{
 }
 
 .tab-links.active-link::after{
-    width: 50%;
+    width: 75%;
 }
 
 .tab-contents ul li{
     list-style: none;
     margin: 10px 0;
+    color: #BFD7ED;
 }
 .tab-contents ul li span{
-    color: #b54769;
-    font-size: 14px;
+    color: #eaa80c;
+    font-size: 18px;
 }
 .tab-contents{
     display: none;
@@ -168,13 +170,13 @@ nav ul li a:hover::after{
 }
 .services-list div a{
     text-decoration: none;
-    color: #fff;
+    color: #323232;
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
 }
 .services-list div:hover{
-    background: #ff004f;
+    background: #323232;
     transform: translateY(-10px);
 }
 /* -------portfolio----------- */
@@ -201,7 +203,7 @@ nav ul li a:hover::after{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    background: linear-gradient(#eaa70c75, #003B73);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -213,7 +215,7 @@ nav ul li a:hover::after{
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
-    font-size: 14px;
+    font-size: 20px;
    transition: height 0.5s;
 }
 .layer h3{
@@ -222,13 +224,13 @@ nav ul li a:hover::after{
 }
 .layer a{
     margin-top: 20px;
-    color: #ff004f;
+    color: #003B73;
     text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
+    font-size: 30px;
+    line-height: 100px;
+    background: #eaa80c;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     text-align: center;
 }
@@ -240,17 +242,18 @@ nav ul li a:hover::after{
 }
 .btn{
     display: block;
+    font-size: 20px;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+    border: 1px solid #BFD7ED;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: #fff;
+    color: #BFD7ED;
     transition: background 0.5s;
 }
 .btn:hover{
-    background: #ff004f;
+    background: #eaa70cda;
 }
 
 /* ---------contact-------- */
@@ -264,7 +267,7 @@ nav ul li a:hover::after{
     margin-top: 30px;
 }
 .contact-left p i{
-    color: #ff004f;
+    color: #eaa70cda;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -275,17 +278,18 @@ nav ul li a:hover::after{
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    color: #ababab;
+    color: #BFD7ED;
     display: inline-block;
     transition: transform 0.5s;
 }
 .social-icons a:hover{
-    color: #ff004f;
+    color: #eaa70cda;
     transform: translateY(-5px);
 }
 .btn.btn2{
     display: inline-block;
-    background: #ff004f;
+    background: #eaa70cda;
+    font-size: 20px;
 }
 .contact-right form{
     width: 100%;
@@ -294,11 +298,11 @@ form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    background: #262626;
+    background: #BFD7ED;
     padding: 15px;
     margin: 15px 0;
-    color: #fff;
-    font-size: 18px;
+    color: #003B73;
+    font-size: 20px;
     border-radius: 6px;
 }
 form .btn2{
@@ -311,15 +315,15 @@ form .btn2{
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background: #262626;
+    background: #eaa70cda;
     font-weight: 300;
     margin-top: 20px;
 }
 .copyright i{
-    color: #ff004f;
+    color: #003B73;
 }
 .copyright a{
-    color: #ff004f;
+    color: #003B73;
     text-decoration: none;
 }
 /* -----------------css for small screens--------- */
@@ -343,7 +347,7 @@ nav .fas{
         font-size: 25px;
     }
     nav ul{
-        background: #ff004f;
+        background: #003B73;
         position: fixed;
         top: 0;
         right: -200px;
@@ -387,7 +391,7 @@ nav .fas{
     }
 }
 #msg{
-    color: #61b752;
+    color: #eaa70cda;
     margin-top: -40px;
     display: block;
 }

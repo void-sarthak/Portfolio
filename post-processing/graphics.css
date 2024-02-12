@@ -14,7 +14,7 @@ body{
 #header{
     width: 100%;
     height: 0vh;
-    background-image: url(007.png);
+    background-image: url();
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -259,20 +259,6 @@ nav ul li a:hover::after{
 .work:hover .layer{
     height: 100%;
 }
-.btn{
-    display: block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px solid #eaa80c;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #BFD7ED;
-    transition: background 0.5s;
-}
-.btn:hover{
-    background: #ff004f;
-}
 
 /* ---------contact-------- */
 .contact-left{
@@ -343,6 +329,85 @@ form .btn2{
     color: #003B73;
     text-decoration: none;
 }
+
+.rayTracerCanvas{
+    align-items: center;
+    width: 60%;
+    height: 60%;
+    align-self: center;
+    margin-left: 450px;
+}
+
+.button{
+    display: inline-block;
+    margin: 30px auto;
+    border: 1px solid #eaa80c;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #BFD7ED;
+    transition: background 0.5s;
+    background: #BFD7ED;
+    color: #003B73;
+    font-size: 20px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+.mode{
+    display: block;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-left: 400px;
+    margin-right: 100px;
+    font-size: 20px;
+}
+
+.form{
+    display: block;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-left: 200px;
+    margin-right: 100px;
+    font-size: 20px;
+}
+
+.input{
+    margin-bottom: 50px;
+}
+
+.input_btn{
+    display: block;
+    width: fit-content;
+    border: 1px solid #000000;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #BFD7ED;
+    transition: background 0.5s;
+    background: #BFD7ED;
+    color: #003B73;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 25px;
+
+}
+
+.button:hover{
+    background: #eaa80c;
+}
+
+.p{
+    margin-top: 25px;
+    font-size: 20px;
+
+}
+
+
 /* -----------------css for small screens--------- */
 nav .fas{
     display: none;
@@ -387,7 +452,7 @@ nav .fas{
         cursor: pointer;
     }
     .sub-title{
-        font-size: 40px;
+        font-size: 10px;
     }
     .about-col-1, .about-col-2{
         flex-basis: 100%;

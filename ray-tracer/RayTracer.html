@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Ray Tracer Renderer</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <script type="text/javascript" src="glMatrix-0.9.5.min.js"></script>
+    <script type="text/javascript" src="rayTracer.js"></script>
+    <link rel = "stylesheet"  href = "graphics.css">
+  </head>
+
+  <body onload="webGLStart();">
+    <div id="header">
+      <div class="container">
+          <nav>
+              <!--img src="images/logo.png" class="logo"-->
+              <ul id="sidemenu">
+                  <li><a href="../index.html">Home</a></li>
+                  <li><a href="../projects.html">Projects</a></li>
+                  <i class="fas fa-times" onclick="closemenu()"></i>
+              </ul>
+              <i class="fas fa-bars" onclick="openmenu()"></i>
+          </nav>
+      </div>
+    </div>
+
+
+    <div id="about">
+      <div class="container">
+          <div class="row">
+              <h1 class="sub-title">Ray Tracing Rendering</h1>
+          </div>
+      </div>
+    </div>
+
+    <div class = "rayTracerCanvas">
+      <canvas
+        id="rayTracerCanvas"
+        style="border: none"
+        width="800"
+        height="800"
+      ></canvas>
+    </div>
+
+    <div class = "mode">
+      <h2>Shading Mode:</h2>
+      <button class="button" onClick = "applyPhong()">Phong</button>
+      <button class="button" onClick = "applyShadow()"> Phong + Shadow</button>
+      <button class="button" onClick = "applyReflection()">Phong + Reflection</button>
+      <button class="button" onClick = "applyAll()">Phong + Shadow + Reflection</button>
+      <br>Move Light 
+      <class = "sliders">
+        <input autocomplete="off" type="range" min="-60" max="60" value="0" id="lightDirection">
+      Bounce Limit 
+      <class = "sliders">
+        <input autocomplete="off" type="range" min="1" max="5" value="1" id="bounceLimit">
+      </br>
+    </div>
+
+    <div class="copyright">
+      <p>Copyright ©<a href="https://www.linkedin.com/in/sarthak-agarwal-604831241/">Sarthak Agarwal</a></p>
+  </div>
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbztSO6SuQRSaRgdSJ5XgSIve7Fb6cjTpxl_0VW9zxxJ73Gq-9gW-YIgfqhH5twNwIpl/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  </body>
+</html>
